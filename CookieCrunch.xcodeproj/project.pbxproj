@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1978BD1A19DBE4B300784379 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1978BD1919DBE4B300784379 /* Crashlytics.framework */; };
 		35736CE01991307600D1F1C9 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35736CDF1991307600D1F1C9 /* Chain.swift */; };
 		35736D17199132F300D1F1C9 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 35736D16199132F300D1F1C9 /* Sprites.atlas */; };
 		35736D1919913B8600D1F1C9 /* Grid.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 35736D1819913B8600D1F1C9 /* Grid.atlas */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1978BD1919DBE4B300784379 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		35736CDF1991307600D1F1C9 /* Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
 		35736D16199132F300D1F1C9 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
 		35736D1819913B8600D1F1C9 /* Grid.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Grid.atlas; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1978BD1A19DBE4B300784379 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +104,7 @@
 		7B3E90871952C5C80045F090 = {
 			isa = PBXGroup;
 			children = (
+				1978BD1919DBE4B300784379 /* Crashlytics.framework */,
 				7B3E90921952C5C80045F090 /* CookieCrunch */,
 				7B3E90A91952C5C90045F090 /* CookieCrunchTests */,
 				7B3E90911952C5C80045F090 /* Products */,
@@ -201,6 +205,7 @@
 				7B3E908C1952C5C80045F090 /* Sources */,
 				7B3E908D1952C5C80045F090 /* Frameworks */,
 				7B3E908E1952C5C80045F090 /* Resources */,
+				1978BD1819DBE28500784379 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -298,6 +303,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1978BD1819DBE28500784379 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 9d0c754e9591b2942a87299303ca41f9ebed7ef9 27ca9b776535ebda1cdba465ab573da1adecde7122d19ee600d2cbe4cf50e7dd";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7B3E908C1952C5C80045F090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -381,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -417,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -429,6 +450,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CookieCrunch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,6 +465,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CookieCrunch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -5,6 +5,7 @@
 //  Created by Matthijs on 19-06-14.
 //  Copyright (c) 2014 Razeware LLC. All rights reserved.
 //
+import Crashlytics
 
 import UIKit
 
@@ -15,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-    // Override point for customization after application launch.
+    Crashlytics.startWithAPIKey("9d0c754e9591b2942a87299303ca41f9ebed7ef9")
     return true
   }
 
